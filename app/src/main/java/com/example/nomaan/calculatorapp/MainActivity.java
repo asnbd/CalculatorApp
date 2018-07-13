@@ -1,5 +1,6 @@
 package com.example.nomaan.calculatorapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText display;
     TextView resultView;
-    Button btnEqual, btnPlus, btnMinus, btnMul, btnDiv, btnCE, btnC, btnBackspace, btnDot, btnPlusMinus;
+    Button btnEqual, btnPlus, btnMinus, btnMul, btnDiv, btnCE, btnC, btnBackspace, btnDot, btnPlusMinus, btnAbout;
     Button btn[] = new Button[10];
 
     int lastOpr = 0;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         display = findViewById(R.id.display);
         resultView = findViewById(R.id.result);
+
+        btnAbout = findViewById(R.id.about);
 
         btnEqual = findViewById(R.id.btn_equal);
         btnPlus = findViewById(R.id.btn_plus);
@@ -137,6 +140,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(intent);
+            }
+        });
+
         btnEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -225,6 +236,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void oprBtnAction(int opr) {
+        if(Double.parseDouble(display.getText().toString()) == 0.0)
+            return;
+
         if (opr == 1) {
             lastOpr = 1;
             if (resultFlag) {

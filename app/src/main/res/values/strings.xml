@@ -2,4 +2,13 @@
     <string name="app_name">CalculatorApp</string>
     <string name="btn_1">1</string>
     <string name="backspace"><![CDATA[<]]></string>
+    <string name="developed_by">Developed By:\nAsswad Sarker Nomaan\n</string>
+    <string name="email">Email:\nnomaan.asn@gmail.com\n</string>
+    <string name="facebook">/asnbd</string>
+    <string name="back">Back</string>
+    <string name="about">About</string>
+    <string name="equal">=</string>
+    <string name="dot">.</string>
+    <string name="zero" />
+    <string name="plus_minus">+/-</string>
 </resources>
