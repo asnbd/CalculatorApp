@@ -19,7 +19,15 @@
             android:layout_marginTop="20dp"
             android:inputType="number"
             android:text="0"
-            android:gravity="right"/>
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_gravity="right"
+            android:textSize="45dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -36,7 +44,7 @@
                 android:text="CE" />
 
             <Button
-                android:id="@+id/c"
+                android:id="@+id/btn_c"
                 android:layout_width="@dimen/number_btn"
                 android:layout_height="@dimen/number_btn_height"
                 android:text="C" />
@@ -45,7 +53,7 @@
                 android:id="@+id/btn_backspace"
                 android:layout_width="@dimen/number_btn"
                 android:layout_height="@dimen/number_btn_height"
-                android:text="<" />
+                android:text="@string/backspace" />
 
             <Button
                 android:id="@+id/btn_div"
