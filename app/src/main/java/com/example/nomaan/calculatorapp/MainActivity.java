@@ -58,91 +58,78 @@ public class MainActivity extends AppCompatActivity {
                 buttonAction(0);
             }
         });
-
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(1);
             }
         });
-
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(2);
             }
         });
-
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(3);
             }
         });
-
         btn[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(4);
             }
         });
-
         btn[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(5);
             }
         });
-
         btn[6].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(6);
             }
         });
-
         btn[7].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(7);
             }
         });
-
         btn[8].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(8);
             }
         });
-
         btn[9].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 buttonAction(9);
             }
         });
-
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 oprBtnAction(1);
             }
         });
-
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 oprBtnAction(2);
             }
         });
-
         btnMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 oprBtnAction(3);
             }
         });
-
         btnDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -236,7 +223,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
     private void oprBtnAction(int opr) {
         if (opr == 1) {
