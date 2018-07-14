@@ -10,14 +10,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/display_marginTop"
             android:gravity="right"
             android:inputType="number"
             android:text="0" />
@@ -28,38 +27,45 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text=""
-            android:textSize="@dimen/result_textSize" />
+            android:textSize = "12dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/button_marginTop"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_sqrt"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
+                android:gravity="center"
+                android:text="Sqrt" />
+
+            <Button
                 android:id="@+id/btn_ce"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:gravity="center"
                 android:text="CE" />
 
             <Button
                 android:id="@+id/btn_c"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="C" />
 
             <Button
                 android:id="@+id/btn_backspace"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="@string/backspace" />
 
             <Button
                 android:id="@+id/btn_div"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="/" />
         </LinearLayout>
 
@@ -70,28 +76,35 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_square"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
+                android:gravity="center"
+                android:text="^2" />
+
+            <Button
                 android:id="@+id/btn_7"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:gravity="center"
                 android:text="7" />
 
             <Button
                 android:id="@+id/btn_8"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="8" />
 
             <Button
                 android:id="@+id/btn_9"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="9" />
 
             <Button
                 android:id="@+id/btn_mul"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="*" />
         </LinearLayout>
 
@@ -102,28 +115,35 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_cube"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
+                android:gravity="center"
+                android:text="^3" />
+
+            <Button
                 android:id="@+id/btn_4"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:gravity="center"
                 android:text="4" />
 
             <Button
                 android:id="@+id/btn_5"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="5" />
 
             <Button
                 android:id="@+id/btn_6"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="6" />
 
             <Button
                 android:id="@+id/btn_minus"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="-" />
         </LinearLayout>
 
@@ -134,28 +154,35 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_power"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
+                android:gravity="center"
+                android:text="^" />
+
+            <Button
                 android:id="@+id/btn_1"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:gravity="center"
                 android:text="@string/btn_1" />
 
             <Button
                 android:id="@+id/btn_2"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="2" />
 
             <Button
                 android:id="@+id/btn_3"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="3" />
 
             <Button
                 android:id="@+id/btn_plus"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="+" />
         </LinearLayout>
 
@@ -166,47 +193,39 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/about"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
+                android:text="@string/about"
+                android:textColor="#ffaa00"/>
+
+            <Button
                 android:id="@+id/btn_plus_minus"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:gravity="center"
                 android:text="@string/plus_minus" />
 
             <Button
                 android:id="@+id/btn_0"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="@string/zero" />
 
             <Button
                 android:id="@+id/btn_dot"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="@string/dot" />
 
             <Button
                 android:id="@+id/btn_equal"
-                android:layout_width="@dimen/number_btn"
-                android:layout_height="@dimen/number_btn_height"
+                android:layout_width="@dimen/number_btn_land"
+                android:layout_height="@dimen/number_btn_height_land"
                 android:text="@string/equal" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/about_marginTop">
-
-            <Button
-                android:id="@+id/about"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/about"
-                android:textColor="#ffaa00"/>
-
-        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

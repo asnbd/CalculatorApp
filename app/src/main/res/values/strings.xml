@@ -9,6 +9,6 @@
     <string name="about">About</string>
     <string name="equal">=</string>
     <string name="dot">.</string>
-    <string name="zero" />
+    <string name="zero">0</string>
     <string name="plus_minus">+/-</string>
 </resources>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         btnEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (display.getText().toString().equals("+") || display.getText().toString().equals("-") || display.getText().toString().equals("*") || display.getText().toString().equals("/"))
+                if (display.getText().toString().equals("+") || display.getText().toString().equals("-") || display.getText().toString().equals("*") || display.getText().toString().equals("/") || display.getText().toString().equals("."))
                     return;
                 else if (lastOpr == 1) {
                     result += Double.parseDouble(display.getText().toString());
@@ -164,9 +165,10 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     result = Double.parseDouble(display.getText().toString());
                 }
+
                 lastOpr = 0;
                 display.setText(result + "");
-                resultView.setText(result + "");
+                resultView.setText("");
                 displayFlag = true;
                 resultFlag = true;
             }
@@ -180,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 result = 0;
                 lastOpr = 0;
                 display.setText("0");
-                resultView.setText("0");
+                resultView.setText("");
             }
         });
 
@@ -224,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
                         result = 0;
                         resultFlag = false;
                         display.setText(".");
-                     //   dotFlag = false;
+                        //   dotFlag = false;
                     }
                     if (displayFlag) {
                         display.setText(".");
@@ -236,7 +238,109 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void oprBtnAction(int opr) {
-        if(Double.parseDouble(display.getText().toString()) == 0.0)
+        String operandStr = display.getText().toString();
+        Double operand;
+
+        try {
+            operand = Double.parseDouble(operandStr);
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Number Format Exception", Toast.LENGTH_SHORT).show(); //Debug
+            return;
+        }
+
+        if (operand == 0.0)
+            return;
+
+        switch (lastOpr) {
+            case 0:
+                resultFlag=false;
+                result = operand;
+                switch (opr){
+                    case 1:
+                        display.setText("+");
+                        break;
+                    case 2:
+                        display.setText("-");
+                        break;
+                    case 3:
+                        display.setText("*");
+                        break;
+                    case 4:
+                        display.setText("/");
+                        break;
+                }
+
+                break;
+            case 1:
+                if (resultFlag) {
+                    result = Double.parseDouble(display.getText().toString());
+                    resultFlag = false;
+                } else {
+                    result += Double.parseDouble(display.getText().toString());
+                }
+                display.setText("+");
+                break;
+            case 2:
+                if (resultFlag) {
+                    result = Double.parseDouble(display.getText().toString());
+                    resultFlag = false;
+                } else {
+                    if (result == 0) {
+                        result = Double.parseDouble(display.getText().toString());
+                    } else {
+                        result -= Double.parseDouble(display.getText().toString());
+                    }
+                }
+                display.setText("-");
+                break;
+            case 3:
+                if (resultFlag) {
+                    result = Double.parseDouble(display.getText().toString());
+                    resultFlag = false;
+                } else {
+                    if (result == 0) {
+                        result = Double.parseDouble(display.getText().toString());
+                    } else {
+                        result *= Double.parseDouble(display.getText().toString());
+                    }
+                }
+                display.setText("*");
+                break;
+            case 4:
+                if (resultFlag) {
+                    result = Double.parseDouble(display.getText().toString());
+                    resultFlag = false;
+                } else {
+                    if (result == 0) {
+                        result = Double.parseDouble(display.getText().toString());
+                    } else {
+                        result /= Double.parseDouble(display.getText().toString());
+                    }
+                }
+                display.setText("/");
+                break;
+        }
+
+        lastOpr = opr;
+
+        resultView.setText("" + result);
+        displayFlag = true;
+        dotFlag = false;
+    }
+
+/*
+ private void oprBtnAction(int opr) {
+        String operandStr = display.getText().toString();
+        Double operand;
+
+        try {
+            operand = Double.parseDouble(operandStr);
+        } catch (NumberFormatException e) {
+
+            return;
+        }
+
+        if (operand == 0.0)
             return;
 
         if (opr == 1) {
@@ -293,6 +397,7 @@ public class MainActivity extends AppCompatActivity {
         displayFlag = true;
         dotFlag = false;
     }
+*/
 
     private void buttonAction(int btn) {
         if (btn == 0) {
