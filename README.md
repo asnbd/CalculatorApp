@@ -1,2 +1,2 @@
 # Calculator App
-Simple Calculator Application for Android device. Developed in Android Studio.
+A Simple Calculator Application for Android device. Developed in Android Studio.
